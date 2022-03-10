@@ -1,0 +1,13 @@
+.copyablelabel {
+    -fx-background-color: transparent;
+}
+.table-head{
+    -fx-background-color: #f8f8ff
+}
+.binfa {
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+}
+#table .table-column {
+    -fx-alignment: CENTER;
+}

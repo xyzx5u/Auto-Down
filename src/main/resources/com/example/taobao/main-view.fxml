@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.taobao.controller.MainController">
+
+    <!--头-->
+    <top>
+        <VBox>
+            <HBox alignment="CENTER_RIGHT">
+                <TextField fx:id="path" prefWidth="400" stylesheets="@text.css" styleClass="copyablelabel" />
+                <Button prefWidth="100" styleClass="middle,btn-default" onAction="#importDir" text="选择文件夹" />
+                <Label prefWidth="10"/>
+                <Button text="登录" styleClass="middle,btn-default" onAction="#toLogin" />
+                <Label prefWidth="10"/>
+                <Button text="获取文件" styleClass="middle,btn-default" onAction="#getFile" />
+                <Label prefWidth="10"/>
+                <Button text="开始下载" styleClass="middle,btn-default" onAction="#start" />
+                <Label prefWidth="10"/>
+                <Button text="清空" styleClass="middle,btn-default" fx:id="clear" onAction="#clear" />
+            </HBox>
+            <Separator/>
+            <HBox alignment="CENTER_RIGHT">
+                <Label prefWidth="10"/>
+                <Label text="科目："/>
+                <ChoiceBox fx:id="subject" />
+                <Label prefWidth="10"/>
+                <Label text="类型："/>
+                <ChoiceBox fx:id="navigation" />
+                <Label prefWidth="10"/>
+                <Label text="试卷类型："/>
+                <ChoiceBox fx:id="filter" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView stylesheets="@text.css" fx:id="mainTable"/>
+    </center>
+
+</BorderPane>
